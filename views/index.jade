@@ -1,0 +1,14 @@
+extends layout
+
+block content
+	h3 Search for a Country
+		input(type="text" placeholder="Search" class="searchBox")
+		button(name="search" class="search") Search
+
+	p#searchResults
+
+	h1 Homepage
+
+	button(name="loadCountries" class="loadCountries") Load Countries
+
+	ul#listOfCountries
