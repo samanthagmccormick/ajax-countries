@@ -21,7 +21,7 @@ $(function() {
 			// to the page
 			for (var i = 0; i < responseData.length; i++) {
 				$('#listOfCountries').append(
-					'<li>' + responseData[i].name + '...' + responseData[i].frenchName + '...' + responseData[i].localName + '...' + responseData[i].region + '</li>'
+					'<li class="glyphicon glyphicon-star-empty">' + responseData[i].name + '...' + responseData[i].frenchName + '...' + responseData[i].localName + '...' + responseData[i].region + '</li><br />'
 					); // end append
 			}
 		});  // end get request
