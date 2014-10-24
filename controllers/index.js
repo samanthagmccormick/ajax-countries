@@ -30,6 +30,25 @@ var indexController = {
 
 		// Send those searchResults to the client, for use in jQuery
 		res.send(searchResults);
+	},
+	hasTraveled: function(req, res) {
+		console.log("Has traveled works");
+
+		var starredResults = [];
+		// This is your postdata
+		console.log(req.body.starred);
+		var starred = req.body.starred;
+
+	// Search all countries to see if the clicked star text contents matches the object
+		for (var i = 0; i < countries.length; i++) {
+			if (countries[i].name === starred) {
+				// Add an object property to this specific country, set hasTraveled to true
+				countries[i].hasTraveled = true;   
+			}
+		}
+
+		res.send(countries);
+
 	}
 };
 
